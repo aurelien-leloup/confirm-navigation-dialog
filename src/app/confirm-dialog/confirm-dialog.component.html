@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Confirm leaving the page</h2>
+<mat-dialog-content>
+  You have unsaved data. Do you confirm leaving the page ?
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Confirm</button>
+</mat-dialog-actions>

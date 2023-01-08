@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'confirm-navigation-dialog';
+
+  constructor(private router: Router) {
+  }
+
+
+  onFloatingButtonClicked() {
+    if (this.router.url.includes('create')) {
+      this.router.navigate(['/']);
+    } else {
+      this.router.navigate(['/create']);
+    }
+  }
 }
